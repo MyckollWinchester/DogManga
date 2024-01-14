@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.carousel__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: linear-gradient(rgba(34, 34, 34, 0.2666666667), rgba(34, 34, 34, 0.9333333333) 90%);
+}
+.carousel__content {
+  margin-left: 100px;
+  width: 70%;
+  max-width: 700px;
+}
+.carousel__subtitle {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.carousel__title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.carousel__genres {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.carousel__genre {
+  border: white 1px solid;
+  font-size: 0.8rem;
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: background-color 75ms linear;
+}
+.carousel__genre--comedy:hover {
+  background-color: rgb(214, 159, 43);
+}
+.carousel__genre--psychological:hover {
+  background-color: rgb(146, 64, 179);
+}
+.carousel__genre--romance:hover {
+  background-color: rgb(204, 40, 59);
+}
+.carousel__genre--shounen:hover {
+  background-color: rgb(98, 193, 57);
+}
+.carousel__genre--slice-of-life:hover {
+  background-color: rgb(186, 160, 95);
+}
+.carousel__genre--supernatural:hover {
+  background-color: rgb(229, 229, 229);
+  color: #222;
+}
+.carousel__description {
+  margin: 0;
+  line-height: 1.6rem;
+}
+.carousel__last-chapter {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.carousel__link {
+  text-decoration: none;
+  color: #222;
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 8px 24px;
+}
+.carousel__link:hover {
+  cursor: pointer;
+}
+.carousel__status {
+  color: #666;
+}
+
+.carousel__item {
+  background-color: #222;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  height: 650px;
+  color: white;
+}
+
+#carousel-item-1 {
+  background-image: url(../img/nazuna.webp);
+}
+#carousel-item-1 .carousel__title, #carousel-item-1 .carousel__chapter {
+  color: rgb(133, 133, 199);
+}/*# sourceMappingURL=main.css.map */

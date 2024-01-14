@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.carousel {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: linear-gradient(#2224, #222e 90%);
+  }
+
+  &__content {
+    margin-left: 100px;
+    width: 70%;
+    max-width: 700px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__genres {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__genre {
+    border: white 1px solid;
+    font-size: .8rem;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: background-color 75ms linear;
+
+    &--comedy:hover { background-color: rgb(214, 159, 43); }
+    &--psychological:hover { background-color: rgb(146, 64, 179); }
+    &--romance:hover { background-color: rgb(204, 40, 59); }
+    &--shounen:hover { background-color: rgb(98, 193, 57); }
+    &--slice-of-life:hover { background-color: rgb(186, 160, 95); }
+    &--supernatural:hover { background-color: rgb(229, 229, 229); color: #222; }
+  }
+
+  &__description {
+    margin: 0;
+    line-height: 1.6rem;
+  }
+
+  &__last-chapter {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #222;
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 8px 24px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__status {
+    color: #666;
+  }
+
+}
+
+.carousel__item {
+  background-color: #222;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  height: 650px;
+  color: white;
+}
+
+#carousel-item-1 {
+  background-image: url(../img/nazuna.webp);
+  
+  .carousel {
+    &__title,
+    &__chapter {
+      color: rgb(133, 133, 199);
+    }
+  }
+}
