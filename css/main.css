@@ -2,11 +2,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  cursor: default;
 }
 
 body {
   margin: 0;
+  color: white;
+  background-color: #000;
   font-family: Helvetica, sans-serif;
 }
 
@@ -15,14 +16,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  background: linear-gradient(rgba(34, 34, 34, 0.2666666667), rgba(34, 34, 34, 0.9333333333) 90%);
+  background: linear-gradient(rgba(34, 34, 34, 0.2666666667), #222222 98%);
 }
 .carousel__content {
   margin-left: 100px;
   width: 70%;
   max-width: 700px;
 }
-.carousel__subtitle {
+.carousel__section-name {
   margin: 0;
   font-size: 1.3rem;
 }
@@ -107,4 +108,89 @@ body {
 }
 #carousel-item-1 .carousel__title, #carousel-item-1 .carousel__chapter {
   color: rgb(133, 133, 199);
+}
+
+.latest {
+  margin: 0 100px;
+}
+.latest__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 75px;
+}
+.latest__section-name {
+  font-size: 1.4rem;
+  margin: 50px 0;
+}
+
+.latest .card {
+  text-decoration: none;
+  color: white;
+}
+.latest .card__image {
+  width: 350px;
+  height: 325px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 10px;
+}
+.latest .card__image--blur {
+  position: absolute;
+  transform: translateX(-350px);
+  width: 350px;
+  height: 325px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 10px;
+  z-index: -1;
+  filter: blur(30px) opacity(0) saturate(300%);
+  transition: filter 0.4s;
+}
+.latest .card__title {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.latest .card__chapter {
+  font-size: 0.9rem;
+  color: #999;
+}
+.latest .card:hover {
+  cursor: pointer;
+}
+.latest .card:hover .card__image--blur {
+  filter: blur(30px) opacity(0.8) saturate(300%);
+}
+
+.footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  color: #222;
+  height: 125px;
+}
+.footer__copyright {
+  color: #999;
+  margin-left: 40px;
+}
+.footer__list {
+  display: flex;
+  margin-right: 40px;
+  gap: 25px;
+  list-style: none;
+}
+.footer__link {
+  color: #222;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

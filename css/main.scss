@@ -2,11 +2,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  cursor: default;
 }
 
 body {
   margin: 0;
+  color: white;
+  background-color: #000;
   font-family: Helvetica, sans-serif;
 }
 
@@ -16,7 +17,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    background: linear-gradient(#2224, #222e 90%);
+    background: linear-gradient(#2224, #222f 98%);
   }
 
   &__content {
@@ -25,7 +26,7 @@ body {
     max-width: 700px;
   }
 
-  &__subtitle {
+  &__section-name {
     margin: 0;
     font-size: 1.3rem;
   }
@@ -110,6 +111,99 @@ body {
     &__title,
     &__chapter {
       color: rgb(133, 133, 199);
+    }
+  }
+}
+
+.latest {
+  margin: 0 100px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 75px;
+  }
+
+  &__section-name {
+    font-size: 1.4rem;
+    margin: 50px 0;
+  }
+}
+
+.latest .card {
+  text-decoration: none;
+  color: white;
+
+  &__image {
+    width: 350px;
+    height: 325px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    
+    &--blur {
+      position: absolute;
+      transform: translateX(-350px);
+      width: 350px;
+      height: 325px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 10px;
+      z-index: -1;
+      filter: blur(30px) opacity(0) saturate(300%);
+      transition: filter .4s;
+    }
+  }
+
+  &__title {
+    margin: 6px 0;
+    font-size: 1.1rem;
+    width: fit-content;
+  }
+  
+  &__chapter {
+    font-size: .9rem;
+    color: #999;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .card__image--blur {
+      filter: blur(30px) opacity(0.8) saturate(300%);
+    }
+  }
+}
+
+
+.footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  color: #222;
+  height: 125px;
+
+  &__copyright {
+    color: #999;
+    margin-left: 40px
+  }
+
+  &__list {
+    display: flex;
+    margin-right: 40px;
+    gap: 25px;
+    list-style: none;
+  }
+
+  &__link {
+    color: #222;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
